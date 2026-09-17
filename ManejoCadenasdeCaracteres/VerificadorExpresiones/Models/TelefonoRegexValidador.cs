@@ -14,6 +14,15 @@ namespace VerificadorExpresiones.Models
 
         }
 
+        public override string VerMensaje()
+        {
+            if (Validar())
+            {
+                return $"validacion correcta por regex";
+            }
+            return $"no cumple por regex";
+        }
+
         public override bool Validar()
         {
             string exp = Expresion;
